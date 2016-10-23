@@ -15,10 +15,6 @@ public class Parser {
         s = args;
         nom = 0;
         sEnded = false;
-        return parse();
-    }
-
-    private Expression parse() {
         return parseBinaryExpression(0);
     }
 
@@ -70,7 +66,7 @@ public class Parser {
         String token = parseToken();
 
         if (token.equals("(")) {
-            Expression res = parse();
+            Expression res = parseBinaryExpression(0);
             parseToken();
             return res;
         }
