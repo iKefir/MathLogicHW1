@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 
 public class MathLogicHW1 {
-    private static String s = "good5.in";
+    private static String s = "good1.in";
     private static Parser parser = new Parser();
     private static PrintWriter out;
     private static HashMap<String, String> helper = new HashMap<>();
@@ -89,7 +89,7 @@ public class MathLogicHW1 {
             buf = in.readLine();
             if (buf == null) break;
             exp = parser.parse(buf);
-            out.print("(" + sch + ") " + exp.toString());
+            out.print("(" + sch + ") " + buf);
             if (isAxiom(exp) || isAssumption(exp.toString()) || isMP(exp)) {
                 prooved.put(exp.toString(), sch);
                 if (exp.getClass() == Implication.class) {

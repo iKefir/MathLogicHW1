@@ -113,7 +113,7 @@ public class Parser {
         while (true) {
             String token = parseToken();
             int tPower = expressionPower(token);
-            if (tPower < power) {
+            if ((token.equals("->") && tPower < power) || (tPower <= power)) {
                 nom -= token.length();
                 return left;
             }
