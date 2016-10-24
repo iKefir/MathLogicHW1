@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 
 public class MathLogicHW1 {
-    private static String s = "good1.in";
+    private static String s = "good5.in";
     private static Parser parser = new Parser();
     private static PrintWriter out;
     private static HashMap<String, String> helper = new HashMap<>();
@@ -67,7 +67,6 @@ public class MathLogicHW1 {
             for (MyPair d : data) {
                 if (prooved.containsKey(d.first)) {
                     Integer first = prooved.get(d.first), second = d.second;
-                    MPHelper.remove(expString);
                     out.println(" (M.P. " + first + ", " + second + ")");
                     return true;
                 }
